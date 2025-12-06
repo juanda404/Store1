@@ -1,0 +1,19 @@
+{
+  "name": "parcel",
+  "version": "1.0.0",
+  "description": "Consumo de FakeAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "parcel",
+    "javascript",
+    "node"
+  ],
+  "author": "Juan David Santamaria <juandavidsantamariag@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  }
+}
