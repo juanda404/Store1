@@ -1,5 +1,5 @@
 const $app = document.getElementById("app");
-const API = "[GET] https://api.escuelajs.co/api/v1/products?offset=0&limit=10";
+const API = "https://api.escuelajs.co/api/v1/products?offset=0&limit=12";
 
 const main = async ()=>{
     const response = await fetch(API);
@@ -8,7 +8,7 @@ const main = async ()=>{
     const output = products?.map((product) =>{
         return `
             <article class="Card">
-                <imag src="${product.images[0]}">
+                <img src="${product.images[0]}" />
                 <h2>
                     ${product.title}<small>Precio $ ${product.price}</small>
                 </h2>

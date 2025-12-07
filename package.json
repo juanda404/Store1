@@ -2,9 +2,11 @@
   "name": "parcel",
   "version": "1.0.0",
   "description": "Consumo de FakeAPI",
-  "main": "index.js",
+
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel serve --port 8080 src/index.html",
+    "build": "parcel build src/index.html --public-url ./"
   },
   "keywords": [
     "parcel",
@@ -14,6 +16,7 @@
   "author": "Juan David Santamaria <juandavidsantamariag@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "parcel": "^2.16.1"
+    "parcel": "^2.16.1",
+    "posthtml-include": "^2.0.1"
   }
 }

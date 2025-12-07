@@ -1,3 +1,6 @@
+/* ==========================================
+   FONT & GLOBAL RESET
+========================================== */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap");
 
 body {
@@ -5,52 +8,257 @@ body {
   padding: 0;
   color: #3c484e;
   font-family: "Open Sans", sans-serif;
+  background: #f7f9fc;
 }
 
+/* ==========================================
+   HEADER — Modern Clean Style
+========================================== */
+.Header {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  box-shadow: 0 2px 8px rgba(39, 44, 49, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Logo */
+.header__logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+/* Navigation (desktop) */
+.header__nav {
+  display: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #3c484e;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.header__nav a:hover {
+  opacity: 0.6;
+}
+
+/* CTA Button */
+.header__cta {
+  background: #1e5eff;
+  color: #fff !important;
+  padding: 8px 18px;
+  border-radius: 5px;
+  font-weight: 600;
+}
+
+.header__cta:hover {
+  opacity: 0.9;
+}
+
+/* Mobile Menu Button */
+.header__menu-btn {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #3c484e;
+}
+
+/* Mobile Menu */
+.header__nav-mobile {
+  display: none;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(39, 44, 49, 0.08);
+}
+
+.header__nav-mobile a {
+  margin-bottom: 12px;
+  text-decoration: none;
+  color: #3c484e;
+}
+
+/* ==========================================
+   MAIN — Layout Section
+========================================== */
 .Main {
-  padding: 10px;
-  grid-template-columns: minmax(auto, 768px);
   display: grid;
   justify-content: center;
+  grid-template-columns: minmax(auto, 768px);
+  padding: 20px;
+  gap: 2rem;
 }
 
+/* ==========================================
+   ITEMS GRID
+========================================== */
 .Items {
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 1.5rem;
-  grid-row-gap: 1.5em;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
 }
 
+/* ==========================================
+   PRODUCT CARD — Modern UI
+========================================== */
 .Card {
-  text-decoration: none;
-  box-shadow: 8px 14px 38px rgba(39, 44, 49, 0.06),
-    1px 3px 8px rgba(39, 44, 49, 0.03);
-  border-radius: 5px;
-  margin: 0 0 20px 0;
   display: block;
-  animation-duration: 4s;
-  animation-name: fade;
+  text-decoration: none;
+  border-radius: 8px;
+  background: #ffffff;
+
+  /* Modern smooth shadows */
+  box-shadow: 
+    0px 6px 18px rgba(39, 44, 49, 0.06),
+    1px 3px 8px rgba(39, 44, 49, 0.03);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  animation: fade 0.8s ease;
+}
+
+.Card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0px 12px 32px rgba(39, 44, 49, 0.10),
+    1px 5px 12px rgba(39, 44, 49, 0.06);
 }
 
 .Card img {
   width: 100%;
   height: auto;
-  border-radius: 5px 5px 0 0;
+  border-radius: 8px 8px 0 0;
 }
 
 .Card h2 {
   font-size: 18px;
   font-weight: 300;
-  padding: 5px 10px;
+  padding: 8px 12px;
+  color: #1e293b;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 @keyframes fade {
-  from {
-    opacity: 0;
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ==========================================
+   FOOTER — Modern Clean Style
+========================================== */
+.footer {
+  background: var(--color-background-footer, #0F172A);
+  color: var(--color-footer-text, #E2E8F0);
+  padding: 2.5rem 1.5rem;
+  margin-top: auto;
+}
+
+.footer__content {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Branding */
+.footer__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.footer__tagline {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+/* Links */
+.footer__links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.footer__links a {
+  color: var(--color-footer-text, #E2E8F0);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.2s ease;
+}
+
+.footer__links a:hover {
+  opacity: 0.6;
+}
+
+/* Social icons */
+.footer__social {
+  display: flex;
+  gap: 1.2rem;
+  font-size: 1.3rem;
+}
+
+.footer__social a {
+  color: var(--color-footer-text, #E2E8F0);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footer__social a:hover {
+  opacity: 0.6;
+}
+
+/* Copyright */
+.footer__bottom {
+  text-align: center;
+  padding-top: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+@media (min-width: 700px) {
+  /* Footer layout */
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-  to {
-    opacity: 1;
+
+  /* Header desktop nav */
+  .header__nav {
+    display: flex;
   }
+
+  .header__menu-btn {
+    display: none;
+  }
+
+
+}
+
+
+@media (max-width: 768px){
+
+  .Items {
+  grid-template-columns: minmax(auto, 1fr);
+  gap: 1.5rem;
+}
 }
