@@ -2,11 +2,11 @@
   "name": "parcel",
   "version": "1.0.0",
   "description": "Consumo de FakeAPI",
-
   "source": "src/index.html",
   "scripts": {
     "start": "parcel serve --port 8080 src/index.html",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build src/index.html --public-url ./",
+    "deploy": "gh-pages -d dist"
   },
   "keywords": [
     "parcel",
@@ -16,6 +16,7 @@
   "author": "Juan David Santamaria <juandavidsantamariag@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.16.1",
     "posthtml-include": "^2.0.1"
   }
